@@ -16,4 +16,70 @@ else:
 
 for county in counties:
     print(county)
-    
+
+counties_dict={"Arapahoe":422829, "Denver":463353, "Jefferson":432438}
+
+'Get Keys if a dictionary'
+for county in counties_dict:
+    print(county)
+
+'Using Keys method to iterate a dictionary to get the Keys'
+for county in counties_dict.keys():
+    print(county)
+
+"Get values in a dictionary using the values method"
+for voters in counties_dict.values():
+    print(voters)
+
+'counties list using the key to get values'
+for county in counties_dict:
+    print(counties_dict[county])
+
+for county in counties_dict:
+    print(counties_dict.get(county))
+
+'items methof to get keys and values'
+for county, voters in counties_dict.items():
+    print(county,voters)
+
+voting_data = [{"county":"Arapahoe","registered_voters":422829},
+                {"county":"Denver","registered_voters":463353},
+                {"county":"Jefferson","registered_voters":432438}]
+for county_dict in voting_data:
+    print(county_dict)
+
+'get the va.ues from a list'
+for county_dict in voting_data:
+    for value in county_dict.values():
+        print(value)
+
+
+for county_dict in voting_data:
+    print(county_dict['county'])
+
+'print each county and registered voter for the cunties dictionary'
+counties_dict = {"Arapahoe":369237, "Denver":413229, "Jefferson":390222}
+for county, voters in counties_dict.items():
+    print(county + " county has " + str(voters) + " registered voters. ")
+
+'print county and registered voters for each county using F-string'
+for county, voters in counties_dict.items():
+    print(f"{county} county has {voters} registered voters.")
+
+
+'Using multiple F-strings'
+candidate_votes = int(input("How many votes did the candidate get in the election? "))
+total_votes = int(input("What is the total number of votes in the election? "))
+message_to_candidate = (
+    f"You received {candidate_votes} number of votes. "
+    f"The total number of votes in the election was {total_votes}. "
+    f"You received {candidate_votes / total_votes * 100}% of the total votes.")
+print(message_to_candidate)
+
+
+'formating to add thousand separator and format percentage of votes to two decimal places'
+message_to_candidate = (
+    f"You received {candidate_votes:,} number of votes. "
+    f"The total number of votes in the election was {total_votes:,}. "
+    f"You received {candidate_votes / total_votes * 100:.2f}% of the total votes.")
+
