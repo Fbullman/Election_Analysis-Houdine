@@ -41,6 +41,7 @@ for county in counties_dict:
     print(counties_dict.get(county))
 
 'items metho to get keys and values'
+'items method to get keys and values'
 for county, voters in counties_dict.items():
     print(county,voters)
 
@@ -72,6 +73,14 @@ for county, voters in counties_dict.items():
 'Using multiple F-strings'
 candidate_votes = int(input("How many votes did the candidate get in the election? "))
 total_votes = int(input("What is the total number of votes in the election? "))
+message_to_candidate = (
+    f"You received {candidate_votes} number of votes. "
+    f"The total number of votes in the election was {total_votes}. "
+    f"You received {candidate_votes / total_votes * 100}% of the total votes.")
+print(message_to_candidate)
+
+
+'formating to add thousand separator and format percentage of votes to two decimal places'
 message_to_candidate = (
     f"You received {candidate_votes:,} number of votes. "
     f"The total number of votes in the election was {total_votes:,}. "
